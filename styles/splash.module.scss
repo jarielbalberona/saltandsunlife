@@ -1,0 +1,83 @@
+.splashScreenContainer {
+    width: 100vw;
+    text-align: center;
+    background: linear-gradient(90deg, #3d5a80 0%, #97c1d9 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .brandWavesContaienr {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      .brandContainer {
+        height: 100%;
+        .brand {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    
+    .wavesContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .waves {
+        width: 100%;
+        height: 2vh;
+
+        .parallax > use {
+            animation: move-forever 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          }
+          .parallax > use:nth-child(1) {
+            animation-delay: -1s;
+            animation-duration: 2s;
+          }
+          .parallax > use:nth-child(2) {
+            animation-delay: -1s;
+            animation-duration: 3s;
+          }
+          .parallax > use:nth-child(3) {
+            animation-delay: -2s;
+            animation-duration: 4s;
+          }
+          .parallax > use:nth-child(4) {
+            animation-delay: -2s;
+            animation-duration: 5s;
+          }
+          
+          @keyframes move-forever {
+            0% {
+              transform: translate3d(-90px, 0, 0);
+            }
+            100% {
+              transform: translate3d(85px, 0, 0);
+            }
+          }
+      }
+    }
+  }
+    .undewater {
+
+      height: 100%;
+      position: relative;
+      .water {
+        background-image: linear-gradient(to bottom, #2a3e57, #2f4a6c, rgba(0, 0, 0, 0));
+        height: 6rem;
+        width: 100%;
+        z-index: 100;
+        position: absolute;
+      }
+    
+      .uwPhotograph {
+        width: 100%;
+        height: 55vh;
+        opacity: .75;
+        filter: grayscale(20%);
+      }
+    }
+}
