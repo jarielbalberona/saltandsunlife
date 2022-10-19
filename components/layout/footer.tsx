@@ -11,11 +11,12 @@ const Footer = () => {
         <div className="flex flex-wrap justify-end gap-2 pr-4">
             <a
               target="_blank"
+              rel="noreferrer"
               href="https://www.facebook.com/saltandsunlifestyle"
             >
               <FontAwesomeIcon icon={faFacebookF} className="px-2" />
             </a>
-            <a target="_blank" href="https://instagram.com/saltandsunlifestyle">
+            <a target="_blank" rel="noreferrer" href="https://instagram.com/saltandsunlifestyle">
               <FontAwesomeIcon icon={faInstagram} className="px-2" />
             </a>
             <a href="mailto:hello@saltansun.life">

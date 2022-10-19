@@ -5,7 +5,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <title>Salt & Sun Lifestyle - Diving & Outdoor Gears</title>
         <meta name="description" content="Bringing you quality gears" />
         <link rel="icon" href="/assets/meta/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

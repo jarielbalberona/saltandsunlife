@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+
 import styles from "styles/splash.module.scss";
 
 const SplashScreen = () => {
@@ -7,7 +9,7 @@ const SplashScreen = () => {
       <div className={styles.brandWavesContaienr}>
         <div className={styles.brandContainer}>
           <div className={styles.brand}>
-            <img
+            <Image
               className="block h-20 w-auto"
               src="/assets/logo-light.png"
               alt="Salt & Sun Lifestyle Logo"
@@ -56,7 +58,7 @@ const SplashScreen = () => {
       <div className={styles.undewater}>
         <div className={styles.water} />
         <div className={styles.uwPhotograph}>
-          <img src="/assets/photographs/diane-mini.jpg" />
+          <Image src="/assets/photographs/diane-mini.jpg" />
         </div>
       </div>
     </div>

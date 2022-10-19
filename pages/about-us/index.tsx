@@ -1,7 +1,15 @@
 import React from "react";
+import Head from "next/head";
 
-const ContactUs = () => {
-  return <div className="h-screen">About Us</div>;
+const AboutUs = () => {
+  return (
+    <>
+      <Head>
+        <title>About Us | Salt & Sun Lifestyle - Diving & Outdoor Gears</title>
+      </Head>
+      <div className="h-screen">About Us</div>
+    </>
+  )
 };
 
-export default ContactUs;
+export default AboutUs;

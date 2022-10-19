@@ -1,7 +1,15 @@
 import React from "react";
+import Head from "next/head";
 
 const GetCertified = () => {
-  return <div className="h-screen">Get Certified</div>;
+  return (
+    <>
+      <Head>
+        <title>Get Certified | Salt & Sun Lifestyle - Diving & Outdoor Gears</title>
+      </Head>
+      <div className="h-screen">Get Certified</div>
+    </>
+  )
 };
 
 export default GetCertified;

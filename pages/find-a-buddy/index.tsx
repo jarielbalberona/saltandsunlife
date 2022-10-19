@@ -1,7 +1,15 @@
 import React from "react";
+import Head from "next/head";
 
 const FindABuddy = () => {
-  return <div className="h-screen">find-a-buddy</div>;
+  return (
+    <>
+      <Head>
+        <title>Find a buddy | Salt & Sun Lifestyle - Diving & Outdoor Gears</title>
+      </Head>
+      <div className="h-screen">Find a buddy</div>
+    </>
+  )
 };
 
 export default FindABuddy;
