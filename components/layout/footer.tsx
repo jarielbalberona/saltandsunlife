@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="w-full py-4 leading-tight  text-sm text-center text-white bg-blue-100">
       <div className="grid grid-cols-2 gap-2">
-        <div className="text-left pl-4">© Copyright - Salt & Sun Lifestyle</div>
+        <div className="text-left pl-4">© Salt & Sun Lifestyle</div>
         <div className="flex flex-wrap justify-end gap-2 pr-4">
             <a
               target="_blank"

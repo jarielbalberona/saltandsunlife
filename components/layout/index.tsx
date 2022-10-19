@@ -28,7 +28,8 @@ const Layout = ({ children }: LayoutProps) => {
         leave="transition-opacity duration-150"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
-        className="z-50"
+        className="z-50 overflow-hidden"
+
       >
         <SplashScreen />
       </Transition>
