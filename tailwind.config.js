@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -6,6 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        cursive: ['Rock Salt'],
+        sans: ['Montserrat', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
       colors: {
         primary: "#162a43",
         blue: {

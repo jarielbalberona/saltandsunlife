@@ -3,20 +3,16 @@ import Head from "next/head";
 
 const Home: NextPage = () => {
   return (
-    <>
-      <Head>
-        <title>Salt & Sun Lifestyle</title>
-        <meta name="description" content="Bringing you quality gears" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div>
-        <div className="pt-24 h-screen">
+    <div className="home-page">
+      <div className="pt-32 pb-24">
           <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-            <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-              <p className="uppercase tracking-loose w-full">Diving soon 🤙</p>
-              <h1 className="my-4 text-5xl font-bold leading-tight">
-                Salt & Sun Lifestyle
+            <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left text-white">
+              <h1 className="mt-4 text-5xl font-bold leading-tight font-cursive">
+                Salt & Sun 
               </h1>
+              <h2 className="mb-4 text-4xl leading-tight">
+                Lifestyle
+              </h2>
               <p className="leading-normal text-sx mb-8">
                 Bringing you quality diving and outdoor gears
               </p>
@@ -27,7 +23,6 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-      </div>
       <div className="relative -mt-12 lg:-mt-24">
         <svg
           viewBox="0 0 1428 174"
@@ -65,10 +60,10 @@ const Home: NextPage = () => {
           </g>
         </svg>
       </div>
-      <section className="bg-white border-b py-8">
-        <div className="container max-w-5xl mx-auto m-8">
+      <section className="bg-white border-b py-8 h-3/5">
+        <div className="container max-w-5xl mx-auto m-8 ">
           <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Title
+            Some Title
           </h2>
           <div className="w-full mb-4">
             <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -83,16 +78,9 @@ const Home: NextPage = () => {
                 at ipsum eu nunc commodo posuere et sit amet ligula.
                 <br />
                 <br />
-                Images from:
-                <a
-                  className="text-pink-500 underline"
-                  href="https://undraw.co/"
-                >
-                  undraw.co
-                </a>
               </p>
             </div>
-            <div className="w-full sm:w-1/2 p-6">SVG</div>
+            <div className="w-full sm:w-1/2 p-6"></div>
           </div>
           <div className="flex flex-wrap flex-col-reverse sm:flex-row">
             <div className="w-full sm:w-1/2 p-6 mt-6"></div>
@@ -106,20 +94,13 @@ const Home: NextPage = () => {
                   Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
                   <br />
                   <br />
-                  Images from:
-                  <a
-                    className="text-pink-500 underline"
-                    href="https://undraw.co/"
-                  >
-                    undraw.co
-                  </a>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
