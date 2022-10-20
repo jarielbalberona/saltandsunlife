@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { scroller } from "react-scroll";
 import { PAGEURL } from "types/url";
 
 const Home: NextPage = () => {
@@ -27,6 +28,15 @@ const Home: NextPage = () => {
       href: PAGEURL.SHOP_ACCESSORIES,
     },
   ];
+
+  const onClickNavigate = () => {
+    scroller.scrollTo("collections", {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
+
   return (
     <>
       <Head>
@@ -88,135 +98,101 @@ const Home: NextPage = () => {
             </g>
           </svg>
         </div>
-        <section className="bg-white  py-8 h-3/5">
-          <div className="container max-w-5xl mx-auto m-8 ">
-            <div className="w-full mb-4">
-              <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div className="flex flex-wrap">
-              <div className="w-5/6 sm:w-1/2 p-6">
-                <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-                  Lorem ipsum dolor sit amet
-                </h3>
-                <p className="text-gray-600 mb-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-                  <br />
-                  <br />
-                </p>
-              </div>
-              <div className="w-full sm:w-1/2 p-6"></div>
-            </div>
-            <div className="flex flex-wrap flex-col-reverse sm:flex-row">
-              <div className="w-full sm:w-1/2 p-6 mt-6"></div>
-              <div className="w-full sm:w-1/2 p-6 mt-6">
-                <div className="align-middle">
-                  <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-                    Lorem ipsum dolor sit amet
-                  </h3>
-                  <p className="text-gray-600 mb-8">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-                    <br />
-                    <br />
-                  </p>
-                </div>
-              </div>
+        <section className="bg-white pt-16 pb-20">
+          <div className="container max-w-5xl mx-auto mt-14 mb-20">
+            <div className="w-full mb-4 text-center">
+              <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
+                Freediving – truly a lifestyle
+              </h3>
+              <p className="text-gray-600 mb-8">
+                alter how you think, care for your body, eat, prioritize, and in
+                other ways
+                <br />
+                <br />
+              </p>
             </div>
           </div>
+          <hr className="mx-auto w-1/2 border" />
         </section>
-        <div className="relative overflow-hidden bg-white">
-          <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
-            <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-              <div className="sm:max-w-lg">
-                <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-                  Stocks just arrived!
-                </h3>
-                <p className="text-gray-600 mb-8">
-                  Our diving gears are back in stock! Grab yours before it’s
-                  gone again! Come by our store today or shop online.
-                </p>
-              </div>
-              <div>
-                <div className="mt-10">
-                  {/* Decorative image grid */}
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
-                  >
-                    <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                      <div className="flex items-center space-x-6 lg:space-x-8">
-                        <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                            <img
-                              src="/assets/images/shop/fins/starter/black.png"
-                              alt=""
-                              className="h-full w-full object-cover object-center"
-                            />
-                          </div>
-                          <div className="h-64 w-44 overflow-hidden rounded-lg">
-                            <img
-                              src="/assets/images/shop/fins/starter/duo-all-white.jpeg"
-                              alt=""
-                              className="h-full w-full object-cover object-center"
-                            />
-                          </div>
-                        </div>
-                        <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div className="h-64 w-44 overflow-hidden rounded-lg">
-                            <img
-                              src="/assets/images/shop/fins/starter/ebony-white.png"
-                              alt=""
-                              className="h-full w-full object-cover object-center"
-                            />
-                          </div>
-                          <div className="h-64 w-44 overflow-hidden rounded-lg">
-                            <img
-                              src="/assets/images/shop/fins/starter/diane-white-trudive.jpeg"
-                              alt=""
-                              className="h-full w-full object-cover object-center"
-                            />
-                          </div>
-                          <div className="h-64 w-44 overflow-hidden rounded-lg">
-                            <img
-                              src="/assets/images/shop/fins/starter/frost-white.png"
-                              alt=""
-                              className="h-full w-full object-cover object-center"
-                            />
-                          </div>
-                        </div>
-                        <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div className="h-64 w-44 overflow-hidden rounded-lg">
-                            <img
-                              src="/assets/images/shop/fins/starter/white.png"
-                              alt=""
-                              className="h-full w-full object-cover object-center"
-                            />
-                          </div>
-                          <div className="h-64 w-44 overflow-hidden rounded-lg">
-                            <img
-                              src="/assets/images/shop/fins/starter/black.png"
-                              alt=""
-                              className="h-full w-full object-cover object-center"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+        <div className="bg-white">
+          <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 bg-white mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8  pt-16">
+            <div className="container">
+              <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
+                Stocks just arrived!
+              </h3>
+              <p className="text-gray-600 mb-8">
+                Our diving gears are back in stock! Grab yours before it’s gone
+                again! Come by our store today or shop online.
+              </p>
+              <a
+                onClick={onClickNavigate}
+                className="inline-block rounded-full border border-transparent bg-blue-500 py-3 px-8 text-center font-medium text-white hover:bg-blue-300"
+              >
+                Browse Collections
+              </a>
+            </div>
+            <div>
+              <div className="overflow-hidden flex items-center space-x-6 lg:space-x-8">
+                <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                  <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                    <img
+                      src="/assets/images/shop/fins/starter/black.png"
+                      alt=""
+                      className="h-full w-full object-cover object-center"
+                    />
                   </div>
-
-                  <a
-                    href="#"
-                    className="inline-block rounded-full border border-transparent bg-blue-500 py-3 px-8 text-center font-medium text-white hover:bg-blue-300"
-                  >
-                    Browse Collections
-                  </a>
+                  <div className="h-64 w-44 overflow-hidden rounded-lg">
+                    <img
+                      src="/assets/images/shop/fins/starter/duo-all-white.jpeg"
+                      alt=""
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+                </div>
+                <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                  <div className="h-64 w-44 overflow-hidden rounded-lg">
+                    <img
+                      src="/assets/images/shop/fins/starter/ebony-white.png"
+                      alt=""
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+                  <div className="h-64 w-44 overflow-hidden rounded-lg">
+                    <img
+                      src="/assets/images/shop/fins/starter/diane-white-trudive.jpeg"
+                      alt=""
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+                  <div className="h-64 w-44 overflow-hidden rounded-lg">
+                    <img
+                      src="/assets/images/shop/fins/starter/frost-white.png"
+                      alt=""
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+                </div>
+                <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                  <div className="h-64 w-44 overflow-hidden rounded-lg">
+                    <img
+                      src="/assets/images/shop/fins/starter/white.png"
+                      alt=""
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+                  <div className="h-64 w-44 overflow-hidden rounded-lg">
+                    <img
+                      src="/assets/images/shop/fins/starter/black.png"
+                      alt=""
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className=" text-white">
+        <div id="collections" className=" text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
               <h2 className="text-2xl font-bold text-white">Collections</h2>
@@ -275,7 +251,7 @@ const Home: NextPage = () => {
                   alt="profile picture"
                 />
                 <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                  <div className="pr-3 font-medium text-gray-900 dark:text-white">
+                  <div className="pr-3 font-medium text-white">
                     Micheal Gough
                   </div>
                   <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
