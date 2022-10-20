@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 4000);
   }, []);
 
   return (
@@ -29,17 +29,14 @@ const Layout = ({ children }: LayoutProps) => {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
         className="z-50 overflow-hidden"
-
       >
         <SplashScreen />
       </Transition>
 
-      <Transition
-        show={!loading}
-      >
+      <Transition show={!loading}>
         <Navbar />
         <main>{children}</main>
-      <Footer />
+        <Footer />
       </Transition>
     </>
   );

@@ -194,7 +194,7 @@ const Navbar = () => {
                   <Link href={"/"}>
                     <img
                       className="block h-8 w-auto lg:hidden"
-                      src="/assets/logo-light.png"
+                      src="/assets/images/logo-light.png"
                       alt="Salt & Sun Lifestyle Logo"
                     />
                   </Link>
@@ -202,7 +202,7 @@ const Navbar = () => {
                   <Link href={"/"}>
                     <img
                       className="hidden h-8 w-auto lg:block"
-                      src="/assets/logo-light.png"
+                      src="/assets/images/logo-light.png"
                       alt="Salt & Sun Lifestyle Logo"
                     />
                   </Link>
@@ -267,10 +267,15 @@ const Navbar = () => {
                             <NavItem
                               key={item.name}
                               item={item}
-                              is_active={Number(`${index}${fd_index}`) === active_navigation}
+                              is_active={
+                                Number(`${index}${fd_index}`) ===
+                                active_navigation
+                              }
                               onClick={() => {
                                 close();
-                                setActiveNavigation(Number(`${index}${fd_index}`));
+                                setActiveNavigation(
+                                  Number(`${index}${fd_index}`)
+                                );
                               }}
                               className="block px-3 py-2 text-base font-medium w-auto"
                             />

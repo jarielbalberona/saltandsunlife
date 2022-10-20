@@ -14,7 +14,7 @@ const SplashScreen = () => {
             <div className={styles.brand}>
               <img
                 className="block h-20 w-auto"
-                src="/assets/logo-light.png"
+                src="/assets/images/logo-light.png"
                 alt="Salt & Sun Lifestyle Logo"
               />
             </div>
@@ -61,7 +61,7 @@ const SplashScreen = () => {
         <div className={styles.undewater}>
           <div className={styles.water} />
           <div className={styles.uwPhotograph}>
-            <img src="/assets/photographs/diane-mini.jpg" />
+            <img src="/assets/images/photographs/diane-mini.jpg" />
           </div>
         </div>
       </div>

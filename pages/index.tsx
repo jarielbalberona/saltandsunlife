@@ -1,7 +1,32 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
+import { PAGEURL } from "types/url";
 
 const Home: NextPage = () => {
+  const callouts = [
+    {
+      name: "Diving mask with snorkel",
+      description: "See clearly  underrwater",
+      imageSrc: "/assets/images/shop/fins/starter/diane-white-trudive.jpeg",
+      imageAlt: "See clearly  underrwater",
+      href: PAGEURL.SHOP_MASKS,
+    },
+    {
+      name: "Freediving Fins",
+      description: "Take your performance to the next level",
+      imageSrc: "/assets/images/shop/fins/starter/duo-dive-white.jpeg",
+      imageAlt: "Take your performance to the next level",
+      href: PAGEURL.SHOP_FINS,
+    },
+    {
+      name: "Diving Accessories",
+      description: "Your diving essentials",
+      imageSrc: "/assets/images/shop/accessories/buoy.jpeg",
+      imageAlt: "Your diving essentials",
+      href: PAGEURL.SHOP_ACCESSORIES,
+    },
+  ];
   return (
     <>
       <Head>
@@ -63,11 +88,8 @@ const Home: NextPage = () => {
             </g>
           </svg>
         </div>
-        <section className="bg-white border-b py-8 h-3/5">
+        <section className="bg-white  py-8 h-3/5">
           <div className="container max-w-5xl mx-auto m-8 ">
-            <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-              Some Title
-            </h2>
             <div className="w-full mb-4">
               <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
             </div>
@@ -101,6 +123,167 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <div className="relative overflow-hidden bg-white">
+          <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
+            <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+              <div className="sm:max-w-lg">
+                <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
+                  Stocks just arrived!
+                </h3>
+                <p className="text-gray-600 mb-8">
+                  Our diving gears are back in stock! Grab yours before it’s
+                  gone again! Come by our store today or shop online.
+                </p>
+              </div>
+              <div>
+                <div className="mt-10">
+                  {/* Decorative image grid */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
+                  >
+                    <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                      <div className="flex items-center space-x-6 lg:space-x-8">
+                        <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                          <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                            <img
+                              src="/assets/images/shop/fins/starter/black.png"
+                              alt=""
+                              className="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                          <div className="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="/assets/images/shop/fins/starter/duo-all-white.jpeg"
+                              alt=""
+                              className="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                        </div>
+                        <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                          <div className="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="/assets/images/shop/fins/starter/ebony-white.png"
+                              alt=""
+                              className="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                          <div className="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="/assets/images/shop/fins/starter/diane-white-trudive.jpeg"
+                              alt=""
+                              className="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                          <div className="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="/assets/images/shop/fins/starter/frost-white.png"
+                              alt=""
+                              className="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                        </div>
+                        <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                          <div className="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="/assets/images/shop/fins/starter/white.png"
+                              alt=""
+                              className="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                          <div className="h-64 w-44 overflow-hidden rounded-lg">
+                            <img
+                              src="/assets/images/shop/fins/starter/black.png"
+                              alt=""
+                              className="h-full w-full object-cover object-center"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a
+                    href="#"
+                    className="inline-block rounded-full border border-transparent bg-blue-500 py-3 px-8 text-center font-medium text-white hover:bg-blue-300"
+                  >
+                    Browse Collections
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className=" text-white">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+              <h2 className="text-2xl font-bold text-white">Collections</h2>
+              <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+                {callouts.map((callout) => (
+                  <div key={callout.name} className="group relative">
+                    <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                      <img
+                        src={callout.imageSrc}
+                        alt={callout.imageAlt}
+                        className="h-full w-full object-cover object-center"
+                      />
+                    </div>
+                    <h3 className="mt-6 text-sm text-white">
+                      <Link href={callout.href}>
+                        <span className="absolute inset-0" />
+                        {callout.name}
+                      </Link>
+                    </h3>
+                    <p className="text-base font-semibold text-white">
+                      {callout.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <section className="bg-blue-400">
+          <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+            <figure className="max-w-screen-md mx-auto">
+              <svg
+                className="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
+                viewBox="0 0 24 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <blockquote>
+                <p className="text-2xl font-medium text-gray-900 dark:text-white">
+                  &quot;Salt & Sun Lifestyle is just awesome. Lorem ipsum dolor,
+                  sit amet consectetur adipisicing elit. Corrupti sunt tempora,
+                  culpa quo, fugit odit vel, optio assumenda modi animi quas
+                  mollitia dolore iusto obcaecati placeat natus adipisci rerum
+                  quidem!&quot;
+                </p>
+              </blockquote>
+              <figcaption className="flex items-center justify-center mt-6 space-x-3">
+                <img
+                  className="w-6 h-6 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  alt="profile picture"
+                />
+                <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                  <div className="pr-3 font-medium text-gray-900 dark:text-white">
+                    Micheal Gough
+                  </div>
+                  <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
+                    Freediver
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
           </div>
         </section>
       </div>
