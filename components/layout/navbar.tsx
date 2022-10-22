@@ -164,13 +164,14 @@ const NotificationsProfileContainer = () => {
 
 const Navbar = () => {
   const [active_navigation, setActiveNavigation] = useState(0);
-  const [navigation] = useState([
-    { name: "Home", href: "/" },
-    { name: "Shop", href: "/shop" },
-    { name: "Explore Freediving", href: "#" },
-    { name: "About Us", href: "/about-us" },
-    { name: "Contact Us", href: "/contact-us" },
-  ]);
+  const [navigation] = useState([{ name: "Home", href: "/" }]);
+  // const [navigation] = useState([
+  //   { name: "Home", href: "/" },
+  //   { name: "Shop", href: "/shop" },
+  //   { name: "Explore Freediving", href: "#" },
+  //   { name: "About Us", href: "/about-us" },
+  //   { name: "Contact Us", href: "/contact-us" },
+  // ]);
 
   return (
     <Disclosure as="nav" className="bg-blue-500">

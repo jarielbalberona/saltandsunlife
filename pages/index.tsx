@@ -1,30 +1,33 @@
+import { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { scroller } from "react-scroll";
 import { PAGEURL } from "types/url";
+import Modal from "components/modal";
 
 const Home: NextPage = () => {
+  const [open, setOpen] = useState(false);
   const callouts = [
     {
       name: "Diving mask with snorkel",
       description: "See clearly  underrwater",
-      imageSrc: "/assets/images/shop/fins/starter/diane-white-trudive.jpeg",
-      imageAlt: "See clearly  underrwater",
+      image_src: "/assets/images/shop/fins/starter/duo-dive-white.jpeg",
+      image_alt: "See clearly  underrwater",
       href: PAGEURL.SHOP_MASKS,
     },
     {
       name: "Freediving Fins",
       description: "Take your performance to the next level",
-      imageSrc: "/assets/images/shop/fins/starter/duo-dive-white.jpeg",
-      imageAlt: "Take your performance to the next level",
+      image_src: "/assets/images/shop/fins/starter/diane-white-trudive.jpeg",
+      image_alt: "Take your performance to the next level",
       href: PAGEURL.SHOP_FINS,
     },
     {
       name: "Diving Accessories",
       description: "Your diving essentials",
-      imageSrc: "/assets/images/shop/accessories/buoy.jpeg",
-      imageAlt: "Your diving essentials",
+      image_src: "/assets/images/shop/accessories/buoy.jpeg",
+      image_alt: "Your diving essentials",
       href: PAGEURL.SHOP_ACCESSORIES,
     },
   ];
@@ -36,7 +39,42 @@ const Home: NextPage = () => {
       smooth: "easeInOutQuart",
     });
   };
-
+  const show_products = [
+    [
+      {
+        src: "/assets/images/shop/fins/starter/black.jpg",
+        alt: "Starter fins long black",
+      },
+      {
+        src: "/assets/images/shop/fins/starter/all-white.jpg",
+        alt: "Starter fins long black",
+      },
+    ],
+    [
+      {
+        src: "/assets/images/shop/fins/starter/ebony-white-cross.jpg",
+        alt: "Starter fins long black",
+      },
+      {
+        src: "/assets/images/shop/fins/starter/diane-white-trudive.jpeg",
+        alt: "Starter fins long black",
+      },
+      {
+        src: "/assets/images/shop/fins/starter/ebony-white.jpg",
+        alt: "Starter fins long black",
+      },
+    ],
+    [
+      {
+        src: "/assets/images/shop/fins/starter/ebony-white.jpg",
+        alt: "Starter fins long black",
+      },
+      {
+        src: "/assets/images/shop/fins/starter/frost-black-cross.jpg",
+        alt: "Starter fins long black",
+      },
+    ],
+  ];
   return (
     <>
       <Head>
@@ -116,77 +154,59 @@ const Home: NextPage = () => {
         </section>
         <div className="bg-white">
           <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 bg-white mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8  pt-16">
-            <div className="container">
-              <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-                Stocks just arrived!
-              </h3>
-              <p className="text-gray-600 mb-8">
-                Our diving gears are back in stock! Grab yours before it’s gone
-                again! Come by our store today or shop online.
-              </p>
-              <a
-                onClick={onClickNavigate}
-                className="inline-block rounded-full border border-transparent bg-blue-500 py-3 px-8 text-center font-medium text-white hover:bg-blue-300"
-              >
-                Browse Collections
-              </a>
+            <div className="container flex flex-col justify-center">
+              <div className="h-full  flex flex-col justify-center mb-12">
+                <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
+                  Stocks just arrived!
+                </h3>
+                <p className="text-gray-600 mb-8">
+                  Our diving gears are back in stock! Grab yours before it’s
+                  gone again! Come by our store today or shop online.
+                </p>
+                <a
+                  onClick={onClickNavigate}
+                  className="inline-block w-max rounded-full border border-transparent bg-blue-500 py-3 px-8 text-center font-medium text-white hover:bg-blue-300 cursor-pointer"
+                >
+                  Browse Collections
+                </a>
+              </div>
+              <div className="h-full"></div>
             </div>
             <div>
               <div className="overflow-hidden flex items-center space-x-6 lg:space-x-8">
                 <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                  <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                    <img
-                      src="/assets/images/shop/fins/starter/black.png"
-                      alt=""
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
-                  <div className="h-64 w-44 overflow-hidden rounded-lg">
-                    <img
-                      src="/assets/images/shop/fins/starter/duo-all-white.jpeg"
-                      alt=""
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
+                  {show_products[0].map((product) => (
+                    <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                      <img
+                        src={product.src}
+                        alt={product.alt}
+                        className="h-full w-full object-cover object-center"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                  {show_products[1].map((product) => (
+                    <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <img
+                        src={product.src}
+                        alt={product.alt}
+                        className="h-full w-full object-cover object-center"
+                      />
+                    </div>
+                  ))}
                 </div>
                 <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                  <div className="h-64 w-44 overflow-hidden rounded-lg">
-                    <img
-                      src="/assets/images/shop/fins/starter/ebony-white.png"
-                      alt=""
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
-                  <div className="h-64 w-44 overflow-hidden rounded-lg">
-                    <img
-                      src="/assets/images/shop/fins/starter/diane-white-trudive.jpeg"
-                      alt=""
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
-                  <div className="h-64 w-44 overflow-hidden rounded-lg">
-                    <img
-                      src="/assets/images/shop/fins/starter/frost-white.png"
-                      alt=""
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
-                </div>
-                <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                  <div className="h-64 w-44 overflow-hidden rounded-lg">
-                    <img
-                      src="/assets/images/shop/fins/starter/white.png"
-                      alt=""
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
-                  <div className="h-64 w-44 overflow-hidden rounded-lg">
-                    <img
-                      src="/assets/images/shop/fins/starter/black.png"
-                      alt=""
-                      className="h-full w-full object-cover object-center"
-                    />
-                  </div>
+                  {show_products[2].map((product) => (
+                    <div className="h-64 w-44 overflow-hidden rounded-lg">
+                      <img
+                        src={product.src}
+                        alt={product.alt}
+                        className="h-full w-full object-cover object-center"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -201,16 +221,23 @@ const Home: NextPage = () => {
                   <div key={callout.name} className="group relative">
                     <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                       <img
-                        src={callout.imageSrc}
-                        alt={callout.imageAlt}
+                        src={callout.image_src}
+                        alt={callout.image_alt}
                         className="h-full w-full object-cover object-center"
                       />
                     </div>
                     <h3 className="mt-6 text-sm text-white">
-                      <Link href={callout.href}>
+                      {/* <Link href={callout.href}>
                         <span className="absolute inset-0" />
                         {callout.name}
-                      </Link>
+                      </Link> */}
+                      <div
+                        onClick={() => setOpen(true)}
+                        className="cursor-pointer"
+                      >
+                        <span className="absolute inset-0" />
+                        {callout.name}
+                      </div>
                     </h3>
                     <p className="text-base font-semibold text-white">
                       {callout.description}
@@ -225,7 +252,7 @@ const Home: NextPage = () => {
           <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
             <figure className="max-w-screen-md mx-auto">
               <svg
-                className="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
+                className="h-12 mx-auto mb-3 text-gray-400"
                 viewBox="0 0 24 27"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -236,25 +263,20 @@ const Home: NextPage = () => {
                 />
               </svg>
               <blockquote>
-                <p className="text-2xl font-medium text-gray-900 dark:text-white">
-                  &quot;Salt & Sun Lifestyle is just awesome. Lorem ipsum dolor,
-                  sit amet consectetur adipisicing elit. Corrupti sunt tempora,
-                  culpa quo, fugit odit vel, optio assumenda modi animi quas
-                  mollitia dolore iusto obcaecati placeat natus adipisci rerum
-                  quidem!&quot;
+                <p className="text-2xl font-medium text-white">
+                  &quot;Nearly contains everything you need for diving and
+                  outdoor accessories&quot;
                 </p>
               </blockquote>
               <figcaption className="flex items-center justify-center mt-6 space-x-3">
                 <img
                   className="w-6 h-6 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  src="/assets/images/shop/shark.png"
                   alt="profile picture"
                 />
-                <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                  <div className="pr-3 font-medium text-white">
-                    Micheal Gough
-                  </div>
-                  <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
+                <div className="flex items-center divide-x-2 divide-gray-50">
+                  <div className="pr-3 font-medium text-white">Marie</div>
+                  <div className="pl-3 text-sm font-light text-gray-50">
                     Freediver
                   </div>
                 </div>
@@ -263,6 +285,7 @@ const Home: NextPage = () => {
           </div>
         </section>
       </div>
+      <Modal open={open} setOpen={setOpen} />
     </>
   );
 };
