@@ -42,34 +42,41 @@ const Home: NextPage = () => {
   const show_products = [
     [
       {
+        id: 1,
         src: "/assets/images/shop/fins/starter/black.jpg",
         alt: "Starter fins long black",
       },
       {
+        id: 2,
         src: "/assets/images/shop/fins/starter/all-white.jpg",
         alt: "Starter fins long black",
       },
     ],
     [
       {
+        id: 3,
         src: "/assets/images/shop/fins/starter/ebony-white-cross.jpg",
         alt: "Starter fins long black",
       },
       {
+        id: 4,
         src: "/assets/images/shop/fins/starter/diane-white-trudive.jpeg",
         alt: "Starter fins long black",
       },
       {
+        id: 5,
         src: "/assets/images/shop/fins/starter/ebony-white.jpg",
         alt: "Starter fins long black",
       },
     ],
     [
       {
+        id: 6,
         src: "/assets/images/shop/fins/starter/ebony-white.jpg",
         alt: "Starter fins long black",
       },
       {
+        id: 7,
         src: "/assets/images/shop/fins/starter/frost-black-cross.jpg",
         alt: "Starter fins long black",
       },
@@ -176,7 +183,10 @@ const Home: NextPage = () => {
               <div className="overflow-hidden flex items-center space-x-6 lg:space-x-8">
                 <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                   {show_products[0].map((product) => (
-                    <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                    <div
+                      key={product.id}
+                      className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100"
+                    >
                       <img
                         src={product.src}
                         alt={product.alt}
@@ -188,7 +198,10 @@ const Home: NextPage = () => {
 
                 <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                   {show_products[1].map((product) => (
-                    <div className="h-64 w-44 overflow-hidden rounded-lg">
+                    <div
+                      key={product.id}
+                      className="h-64 w-44 overflow-hidden rounded-lg"
+                    >
                       <img
                         src={product.src}
                         alt={product.alt}
@@ -199,7 +212,10 @@ const Home: NextPage = () => {
                 </div>
                 <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                   {show_products[2].map((product) => (
-                    <div className="h-64 w-44 overflow-hidden rounded-lg">
+                    <div
+                      key={product.id}
+                      className="h-64 w-44 overflow-hidden rounded-lg"
+                    >
                       <img
                         src={product.src}
                         alt={product.alt}
