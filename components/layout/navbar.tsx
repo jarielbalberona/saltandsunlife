@@ -270,7 +270,7 @@ const Navbar = () => {
                     if (index === 2) {
                       return (
                         <>
-                          {explore_fd_items.map((item, fd_index) => (
+                          {/* {explore_fd_items.map((item, fd_index) => (
                             <NavItem
                               key={item.name}
                               item={item}
@@ -286,7 +286,7 @@ const Navbar = () => {
                               }}
                               className="block px-3 py-2 text-base font-medium w-auto"
                             />
-                          ))}
+                          ))} */}
                         </>
                       );
                     } else {
