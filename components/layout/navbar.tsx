@@ -164,7 +164,12 @@ const NotificationsProfileContainer = () => {
 
 const Navbar = () => {
   const [active_navigation, setActiveNavigation] = useState(0);
-  const [navigation] = useState([{ name: "Home", href: "/" }]);
+  const [navigation] = useState([
+    { name: "Home", href: "/" },
+    { name: "Shop", href: "/shop" },
+    { name: "Explore Freediving", href: "#" },
+    { name: "Contact Us", href: "/contact-us" },
+  ]);
   // const [navigation] = useState([
   //   { name: "Home", href: "/" },
   //   { name: "Shop", href: "/shop" },
@@ -214,16 +219,17 @@ const Navbar = () => {
                   <div className="flex space-x-4">
                     {navigation.map((item: any, index: number) => {
                       if (index === 2) {
-                        return (
-                          <MenuDropdown
-                            key={item.name}
-                            item="explore"
-                            is_active={index === active_navigation}
-                            onClick={() => {
-                              setActiveNavigation(index);
-                            }}
-                          />
-                        );
+                        return <></>;
+                        // return (
+                        //   <MenuDropdown
+                        //     key={item.name}
+                        //     item="explore"
+                        //     is_active={index === active_navigation}
+                        //     onClick={() => {
+                        //       setActiveNavigation(index);
+                        //     }}
+                        //   />
+                        // );
                       } else {
                         return (
                           <NavItem

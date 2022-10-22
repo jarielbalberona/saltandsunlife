@@ -190,7 +190,7 @@ const Home: NextPage = () => {
               </p>
             </div>
           </div>
-          <hr className="mx-auto w-1/2 border" />
+          <hr className="mx-auto w-1/2 " />
         </section>
         <div className="bg-white">
           <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 bg-white mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8  pt-16">
@@ -297,7 +297,8 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <section className="bg-blue-400">
+        <hr className="mx-auto w-1/2 " />
+        <section className="">
           <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
             <figure className="max-w-screen-md mx-auto">
               <svg
