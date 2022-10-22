@@ -182,7 +182,7 @@ const Home: NextPage = () => {
               <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
                 Freediving – truly a lifestyle
               </h3>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-600 mb-8 px-4">
                 alter how you think, care for your body, eat, prioritize, and in
                 other ways
                 <br />

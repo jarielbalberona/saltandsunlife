@@ -20,14 +20,14 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <div className="text-black flex flex-col md:items-center f-f-l pt-3">
+        <div className="text-black flex flex-col items-center">
           <h1 className="text-2xl text-white font-cursive">
             Salt & Sun Lifestyle
           </h1>
 
           <div className="mt-6 mb-3 text-base text-white">
-            <ul className="md:flex items-center">
-              <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0 ">
+            <ul className="md:flex items-center text-center">
+              <li className="md:mr-6 cursor-pointer pt-4 lg:py-0 ">
                 <Link href="/">Home</Link>
               </li>
               <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0 ">
@@ -60,12 +60,12 @@ const Footer = () => {
               <FontAwesomeIcon icon={faPaperPlane} className="px-2" />
             </a>
           </div>
-          <div className="text-sm text-white mb-4 flex">
-            <div className="px-4">
+          <div className="text-sm text-white mb-6 flex flex-col sm:flex-row text-center ">
+            <div className="px-4 pt-2">
               <FontAwesomeIcon icon={faMapMarked} className="pr-1" /> Dumaguete
               City, 6200 Negros Oriental
             </div>
-            <div className="px-4">
+            <div className="px-4 pt-2">
               <FontAwesomeIcon icon={faEnvelope} className="pr-1" />
               hello@saltansun.life
             </div>
