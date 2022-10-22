@@ -5,11 +5,13 @@ import Link from "next/link";
 import { scroller } from "react-scroll";
 import { PAGEURL } from "types/url";
 import Modal from "components/modal";
+import * as gtag from "utilities/google";
 
 const Home: NextPage = () => {
   const [open, setOpen] = useState(false);
-  const callouts = [
+  const collections = [
     {
+      id: "collection_masks",
       name: "Diving mask with snorkel",
       description: "See clearly  underrwater",
       image_src: "/assets/images/shop/fins/starter/duo-dive-white.jpeg",
@@ -17,6 +19,7 @@ const Home: NextPage = () => {
       href: PAGEURL.SHOP_MASKS,
     },
     {
+      id: "collection_fins",
       name: "Freediving Fins",
       description: "Take your performance to the next level",
       image_src: "/assets/images/shop/fins/starter/diane-white-trudive.jpeg",
@@ -24,6 +27,7 @@ const Home: NextPage = () => {
       href: PAGEURL.SHOP_FINS,
     },
     {
+      id: "collection_accesories",
       name: "Diving Accessories",
       description: "Your diving essentials",
       image_src: "/assets/images/shop/accessories/buoy.jpeg",
@@ -33,12 +37,41 @@ const Home: NextPage = () => {
   ];
 
   const onClickNavigate = () => {
+    gtag.event({
+      action: "view_item_list",
+      parameters: {
+        item_list_id: "collections",
+        item_list_name: "Collections",
+        items: collections.map((item) => ({
+          item_id: item.id,
+          item_name: item.name,
+        })),
+      },
+    });
+
     scroller.scrollTo("collections", {
       duration: 800,
       delay: 0,
       smooth: "easeInOutQuart",
     });
   };
+
+  const onOpenCollection = (collection: any) => {
+    setOpen(true);
+    gtag.event({
+      action: "select_item",
+      parameters: {
+        item_list_name: collection.name,
+        items: [
+          {
+            item_id: collection.id,
+            item_name: collection.name,
+          },
+        ],
+      },
+    });
+  };
+
   const show_products = [
     [
       {
@@ -233,12 +266,12 @@ const Home: NextPage = () => {
             <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
               <h2 className="text-2xl font-bold text-white">Collections</h2>
               <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-                {callouts.map((callout) => (
-                  <div key={callout.name} className="group relative">
+                {collections.map((collection) => (
+                  <div key={collection.name} className="group relative">
                     <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                       <img
-                        src={callout.image_src}
-                        alt={callout.image_alt}
+                        src={collection.image_src}
+                        alt={collection.image_alt}
                         className="h-full w-full object-cover object-center"
                       />
                     </div>
@@ -248,15 +281,15 @@ const Home: NextPage = () => {
                         {callout.name}
                       </Link> */}
                       <div
-                        onClick={() => setOpen(true)}
+                        onClick={() => onOpenCollection(collection)}
                         className="cursor-pointer"
                       >
                         <span className="absolute inset-0" />
-                        {callout.name}
+                        {collection.name}
                       </div>
                     </h3>
                     <p className="text-base font-semibold text-white">
-                      {callout.description}
+                      {collection.description}
                     </p>
                   </div>
                 ))}

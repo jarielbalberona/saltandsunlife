@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import Script from "next/script";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -19,8 +19,25 @@ export default function Document() {
         ></link>
       </Head>
       <body>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=GTM-WJ9MV97`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <Main />
         <NextScript />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `,
+          }}
+        />
       </body>
     </Html>
   );
