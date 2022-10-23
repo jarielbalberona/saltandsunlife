@@ -15,19 +15,21 @@ const Shop = () => {
               Our online shop is under maintenance.
             </h1>
             <img
-              className="block w-auto h-60 rounded mt-6"
+              className="block w-auto m-auto h-60 rounded mt-6"
               src="/assets/images/turtle-bubbles.png"
               alt="Turtle sleeping"
             />
             <p className="mt-5 sm:mt-10 lg:w-10/12 text-gray-400 font-normal text-center text-sm sm:text-lg">
               Time to chillax, please check back soon.
             </p>
-            <Link
-              href="/"
-              className=" mt-12 inline-flex text-white w-max bg-blue-600 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-full text-sm px-5 py-2.5 text-center my-4"
-            >
-              Back to Home
-            </Link>
+            <div className="m-auto w-max">
+              <Link
+                href="/"
+                className="mt-12  inline-flex text-white  bg-blue-600 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-full text-sm px-5 py-2.5 text-center my-4"
+              >
+                Back to Home
+              </Link>
+            </div>
           </div>
         </div>
       </div>
