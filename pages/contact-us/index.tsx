@@ -9,15 +9,15 @@ const ContactUs = () => {
           Contact Us | Salt & Sun Lifestyle - Diving & Outdoor Gears
         </title>
       </Head>
-      <section className="bg-white 0 h-screen">
+      <section className="bg-white 0 min-h-screen">
         <div className="flex flex-row">
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">
               We&apos;d love to hear from you
             </h2>
             <p className="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">
-              Got a technical issue? Want to send feedback about a beta feature?
-              Need details about our Business plan? Let us know.
+              Need something? <br /> Our door is always open for a good cup of
+              coffee.
             </p>
             <form
               action="https://formsubmit.co/1ba696cacd7d4c44e17c88e4d8ddef35"
