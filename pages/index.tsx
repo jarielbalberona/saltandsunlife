@@ -13,9 +13,9 @@ const Home: NextPage = () => {
     {
       id: "collection_masks",
       name: "Diving mask with snorkel",
-      description: "See clearly  underrwater",
+      description: "See clearly  underwater",
       image_src: "/assets/images/shop/fins/starter/duo-dive-white.jpeg",
-      image_alt: "See clearly  underrwater",
+      image_alt: "See clearly  underwater",
       href: PAGEURL.SHOP_MASKS,
     },
     {
