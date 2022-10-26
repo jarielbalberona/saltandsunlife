@@ -5,7 +5,10 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta name="description" content="Bringing you quality gears" />
+        <meta
+          name="description"
+          content="Inspiring you to embrace the outdoor lifestyle"
+        />
         <link rel="icon" href="/assets/images/meta/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

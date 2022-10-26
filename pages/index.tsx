@@ -130,7 +130,7 @@ const Home: NextPage = () => {
               </h1>
               <h2 className="mb-4 text-4xl leading-tight">Lifestyle</h2>
               <p className="leading-normal text-sx mb-8">
-                Bringing you quality diving and outdoor gears
+                Inspiring you to embrace the outdoor lifestyle
               </p>
             </div>
 

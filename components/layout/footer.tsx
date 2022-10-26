@@ -34,7 +34,7 @@ const Footer = () => {
                 <Link href="/shop">Shop</Link>
               </li>
               <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0 ">
-                <Link href="/contact-us">Contact Us</Link>
+                <Link href="/drop-us-a-line">Drop us a line</Link>
               </li>
               <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0 ">
                 <Link href={"#"}>Privacy Policy</Link>

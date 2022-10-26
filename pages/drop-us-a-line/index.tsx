@@ -6,7 +6,7 @@ const ContactUs = () => {
     <>
       <Head>
         <title>
-          Contact Us | Salt & Sun Lifestyle - Diving & Outdoor Gears
+          Drop us a line | Salt & Sun Lifestyle - Diving & Outdoor Gears
         </title>
       </Head>
       <section className="bg-white 0 min-h-screen">

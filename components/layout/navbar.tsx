@@ -2,6 +2,9 @@ import React, { Fragment, useEffect, useState } from "react";
 import Link from "next/link";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faAnchor, faHome, faStore } from "@fortawesome/free-solid-svg-icons";
 
 const explore_fd_items = [
   {
@@ -138,6 +141,7 @@ const NavItem = ({
       )}
       aria-current={is_active ? "page" : undefined}
     >
+      {item.icon}
       {item.name}
     </Link>
   );
@@ -165,17 +169,33 @@ const NotificationsProfileContainer = () => {
 const Navbar = () => {
   const [active_navigation, setActiveNavigation] = useState(0);
   const [navigation] = useState([
-    { name: "Home", href: "/" },
-    { name: "Shop", href: "/shop" },
-    { name: "Explore Freediving", href: "#" },
-    { name: "Contact Us", href: "/contact-us" },
+    {
+      name: "Home",
+      icon: <FontAwesomeIcon icon={faHome} className="pr-2" />,
+      href: "/",
+    },
+    {
+      name: "Shop",
+      icon: <FontAwesomeIcon icon={faStore} className="pr-2" />,
+      href: "/shop",
+    },
+    {
+      name: "Explore Freediving",
+      icon: <FontAwesomeIcon icon={faAnchor} className="pr-2" />,
+      href: "#",
+    },
+    {
+      name: "Drop us a line",
+      icon: <FontAwesomeIcon icon={faAnchor} className="pr-2" />,
+      href: "/drop-us-a-line",
+    },
   ]);
   // const [navigation] = useState([
   //   { name: "Home", href: "/" },
   //   { name: "Shop", href: "/shop" },
   //   { name: "Explore Freediving", href: "#" },
   //   { name: "About Us", href: "/about-us" },
-  //   { name: "Contact Us", href: "/contact-us" },
+  //   { name: "Contact Us", href: "drop-us-a-line" },
   // ]);
 
   return (
