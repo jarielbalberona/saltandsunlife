@@ -1,14 +1,16 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
+
 import { scroller } from "react-scroll";
 import { PAGEURL } from "types/url";
 import Modal from "components/modal";
 import * as gtag from "utilities/google";
+import "../styles/home.module.scss";
 
 const Home: NextPage = () => {
   const [open, setOpen] = useState(false);
+
   const collections = [
     {
       id: "collection_masks",
@@ -122,26 +124,33 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="home-page">
-        <div className="pt-32 pb-24">
-          <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <header className="bg-video relative flex items-center justify-center h-[75vh] overflow-hidden">
+          <div className="container z-30 px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
             <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left text-white">
               <h1 className="mt-4 text-5xl font-bold leading-tight font-cursive">
                 Salt & Sun
               </h1>
               <h2 className="mb-4 text-4xl leading-tight">Lifestyle</h2>
               <p className="leading-normal text-sx mb-8">
-                Inspiring you to embrace the outdoor lifestyle
+                Feel more alive. Experience a thrill. Embrace the outdoor
+                lifestyle. 🤿 x ⛰️
               </p>
             </div>
-
-            <div className="w-full md:w-3/5 py-6 text-center">
-              {/* <img className="w-full md:w-4/5 z-50" src="/assets/photographs/diane.jpg" /> */}
-            </div>
           </div>
-        </div>
-        <div className="relative -mt-12 lg:-mt-24">
+
+          <video
+            autoPlay
+            loop
+            muted
+            className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+          >
+            <source src="/assets/videos/bg-video-temp.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </header>
+        <section className="relative z-50 w-full -mt-40">
           <svg
-            viewBox="0 0 1428 174"
+            viewBox="0 0 1428 600"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -173,11 +182,21 @@ const Home: NextPage = () => {
               >
                 <path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"></path>
               </g>
+              <g
+                transform="translate(0, 173.000000)"
+                fill="#FFFFFF"
+                fillRule="nonzero"
+              >
+                <rect
+                  fill="#FFFFFF"
+                  stroke-width="0"
+                  height="500"
+                  width="100%"
+                />
+              </g>
             </g>
           </svg>
-        </div>
-        <section className="bg-white pt-16 pb-20">
-          <div className="container max-w-5xl mx-auto mt-14 mb-20">
+          <div className="absolute w-full  top-[50%]">
             <div className="w-full mb-4 text-center">
               <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
                 Freediving – truly a lifestyle
@@ -190,9 +209,9 @@ const Home: NextPage = () => {
               </p>
             </div>
           </div>
-          <hr className="mx-auto w-1/2 " />
         </section>
-        <div className="bg-white">
+
+        <div className="bg-white -mt-1">
           <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 bg-white mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8  pt-16">
             <div className="container flex flex-col justify-center">
               <div className="h-full  flex flex-col justify-center mb-12">
