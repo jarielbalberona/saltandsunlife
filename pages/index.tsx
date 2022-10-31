@@ -79,41 +79,41 @@ const Home: NextPage = () => {
       {
         id: 1,
         src: "/assets/images/shop/fins/starter/black.jpg",
-        alt: "Starter fins long black",
+        alt: "Starter fins",
       },
       {
         id: 2,
-        src: "/assets/images/shop/fins/starter/all-white.jpg",
-        alt: "Starter fins long black",
+        src: "/assets/images/shop/masks/mackerel.jpg",
+        alt: "Mask with snorkel",
       },
     ],
     [
       {
         id: 3,
-        src: "/assets/images/shop/fins/starter/ebony-white-cross.jpg",
-        alt: "Starter fins long black",
+        src: "/assets/images/shop/masks/threadfin.jpg",
+        alt: "Starter fins",
       },
       {
         id: 4,
         src: "/assets/images/shop/fins/starter/diane-white-trudive.jpeg",
-        alt: "Starter fins long black",
+        alt: "Starter fins",
       },
       {
         id: 5,
-        src: "/assets/images/shop/fins/starter/ebony-white.jpg",
-        alt: "Starter fins long black",
+        src: "/assets/images/shop/fins/starter/ebony-white-cross.jpg",
+        alt: "Starter fins",
       },
     ],
     [
       {
         id: 6,
-        src: "/assets/images/shop/fins/starter/ebony-white.jpg",
-        alt: "Starter fins long black",
+        src: "/assets/images/shop/fins/starter/frost-black-cross.jpg",
+        alt: "Starter fins",
       },
       {
         id: 7,
-        src: "/assets/images/shop/fins/starter/frost-black-cross.jpg",
-        alt: "Starter fins long black",
+        src: "/assets/images/shop/masks/jacks.jpg",
+        alt: "Starter fins",
       },
     ],
   ];
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
                 Salt & Sun
               </h1>
               <h2 className="mb-4 text-4xl leading-tight">Lifestyle</h2>
-              <p className="leading-normal text-sx mb-8">
+              <p className="leading-normal text-left text-sx mb-8">
                 Feel more alive. Experience a thrill. Embrace the outdoor
                 lifestyle. 🤿 x ⛰️
               </p>
@@ -148,7 +148,7 @@ const Home: NextPage = () => {
             Your browser does not support the video tag.
           </video>
         </header>
-        <section className="relative z-50 w-full -mt-40">
+        <section className="relative z-50 w-full sm:-mt-56 -mt-36">
           <svg
             viewBox="0 0 1428 600"
             version="1.1"
@@ -196,7 +196,7 @@ const Home: NextPage = () => {
               </g>
             </g>
           </svg>
-          <div className="absolute w-full  top-[50%]">
+          <div className="absolute w-full  top-[60%]">
             <div className="w-full mb-4 text-center">
               <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
                 Freediving – truly a lifestyle
