@@ -211,7 +211,7 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <div className="bg-white -mt-1">
+        <div className="bg-white -mt-1 pt-24">
           <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 bg-white mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8  pt-16">
             <div className="container flex flex-col justify-center">
               <div className="h-full  flex flex-col justify-center mb-12">
