@@ -127,13 +127,13 @@ const Home: NextPage = () => {
         <header className="bg-video relative flex items-center justify-center h-[75vh] overflow-hidden">
           <div className="container z-30 px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
             <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left text-white">
-              <h1 className="mt-4 text-5xl font-bold leading-tight font-cursive">
+              <h1 className="mt-4 text-4xl font-bold leading-tight font-cursive">
                 Salt & Sun
               </h1>
-              <h2 className="mb-4 text-4xl leading-tight">Lifestyle</h2>
-              <p className="leading-normal text-left text-sx mb-8">
-                Feel more alive. Experience a thrill. Embrace the outdoor
-                lifestyle. 🤿 x ⛰️
+              <h2 className="mb-4 text-3xl leading-tight">Lifestyle</h2>
+              <p className="leading-normal text-left text-sx mb-8 flex flex-col">
+                <span>Feel more alive. Experience a thrill. </span>
+                <span>Embrace the outdoor lifestyle. 🤿 x ⛰️</span>
               </p>
             </div>
           </div>
@@ -189,7 +189,7 @@ const Home: NextPage = () => {
               >
                 <rect
                   fill="#FFFFFF"
-                  stroke-width="0"
+                  strokeWidth="0"
                   height="500"
                   width="100%"
                 />
@@ -198,7 +198,7 @@ const Home: NextPage = () => {
           </svg>
           <div className="absolute w-full  top-[60%]">
             <div className="w-full mb-4 text-center">
-              <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
+              <h3 className="text-2xl text-gray-800 font-bold leading-none mb-3">
                 Freediving – truly a lifestyle
               </h3>
               <p className="text-gray-600 mb-8 px-4">
@@ -211,11 +211,11 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <div className="bg-white -mt-1 pt-24">
+        <div className="bg-white -mt-1 py-24">
           <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 bg-white mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8  pt-16">
             <div className="container flex flex-col justify-center">
               <div className="h-full  flex flex-col justify-center mb-12">
-                <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
+                <h3 className="text-2xl text-gray-800 font-bold leading-none mb-3">
                   Stocks just arrived!
                 </h3>
                 <p className="text-gray-600 mb-8">
