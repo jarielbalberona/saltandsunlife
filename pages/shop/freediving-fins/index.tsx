@@ -6,7 +6,7 @@ const FreedivingFins = () => {
     <>
       <Head>
         <title>
-          Freediving Fins | Salt & Sun Lifestyle - Diving & Outdoor Gears
+          Freediving Fins | Salt & Sun Lifestyle - Dive & Outdoor Gears
         </title>
       </Head>
       <div className="h-screen">Freediving Fins</div>;

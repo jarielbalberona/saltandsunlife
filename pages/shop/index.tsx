@@ -6,7 +6,7 @@ const Shop = () => {
   return (
     <>
       <Head>
-        <title>Shop | Salt & Sun Lifestyle - Diving & Outdoor Gears</title>
+        <title>Shop | Salt & Sun Lifestyle - Dive & Outdoor Gears</title>
       </Head>
       <div className="h-screen">
         <div className="container mx-auto flex flex-col items-center py-12 sm:py-24">

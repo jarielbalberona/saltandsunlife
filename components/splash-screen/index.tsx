@@ -6,7 +6,7 @@ const SplashScreen = () => {
   return (
     <>
       <Head>
-        <title>Salt & Sun Lifestyle - Diving & Outdoor Gears</title>
+        <title>Salt & Sun Lifestyle - Dive & Outdoor Gears</title>
       </Head>
       <div className={styles.splashScreenContainer}>
         <div className={styles.brandWavesContaienr}>

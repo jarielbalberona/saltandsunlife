@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <>
       <Head>
-        <title>Thank you | Salt & Sun Lifestyle - Diving & Outdoor Gears</title>
+        <title>Thank you | Salt & Sun Lifestyle - Dive & Outdoor Gears</title>
       </Head>
       <section className="bg-white 0 h-screen">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">

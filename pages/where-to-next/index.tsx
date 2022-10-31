@@ -5,11 +5,13 @@ const WhereToNExt = () => {
   return (
     <>
       <Head>
-        <title>Where to next? | Salt & Sun Lifestyle - Diving & Outdoor Gears</title>
+        <title>
+          Where to next? | Salt & Sun Lifestyle - Dive & Outdoor Gears
+        </title>
       </Head>
       <div className="h-screen">where to next</div>;
     </>
-  )
+  );
 };
 
 export default WhereToNExt;

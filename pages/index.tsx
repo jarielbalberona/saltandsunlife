@@ -120,7 +120,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Salt & Sun Lifestyle - Diving & Outdoor Gears</title>
+        <title>Salt & Sun Lifestyle - Dive & Outdoor Gears</title>
       </Head>
 
       <div className="home-page">

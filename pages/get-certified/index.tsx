@@ -5,11 +5,13 @@ const GetCertified = () => {
   return (
     <>
       <Head>
-        <title>Get Certified | Salt & Sun Lifestyle - Diving & Outdoor Gears</title>
+        <title>
+          Get Certified | Salt & Sun Lifestyle - Dive & Outdoor Gears
+        </title>
       </Head>
       <div className="h-screen">Get Certified</div>
     </>
-  )
+  );
 };
 
 export default GetCertified;

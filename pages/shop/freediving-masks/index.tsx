@@ -6,7 +6,7 @@ const FreedivingMasks = () => {
     <>
       <Head>
         <title>
-          Freediving Masks | Salt & Sun Lifestyle - Diving & Outdoor Gears
+          Freediving Masks | Salt & Sun Lifestyle - Dive & Outdoor Gears
         </title>
       </Head>
       <div className="h-screen">Freediving Masks</div>;
