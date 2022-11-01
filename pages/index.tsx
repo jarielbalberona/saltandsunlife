@@ -144,7 +144,7 @@ const Home: NextPage = () => {
             muted
             className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
           >
-            <source src="/assets/videos/bg-video-temp.mp4" type="video/mp4" />
+            <source src="/assets/videos/find-a-buddy.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </header>
