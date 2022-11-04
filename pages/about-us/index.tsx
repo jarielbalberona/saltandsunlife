@@ -7,7 +7,10 @@ const AboutUs = () => {
       <Head>
         <title>About Us | Salt & Sun Lifestyle - Dive & Outdoor Gears</title>
       </Head>
-      <div className="h-screen">About Us</div>
+      <div className="h-screen">
+        About Us
+        <a href="tel:+63288910000">callme</a>
+      </div>
     </>
   );
 };
