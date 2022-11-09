@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 
 const FreedivingMasks = () => {
+  const router = useRouter();
+  const { code } = router.query;
+
+  useEffect(() => {
+    console.log("code", code);
+  }, [code]);
+
   return (
     <>
       <Head>

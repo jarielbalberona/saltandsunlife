@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 
 import { scroller } from "react-scroll";
 import { PAGEURL } from "types/url";
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
     },
     {
       id: "collection_fins",
-      name: "Freediving Fins",
+      name: "Freediving fins",
       description: "Take your performance to the next level",
       image_src: "/assets/images/shop/fins/starter/diane-white-trudive.jpeg",
       image_alt: "Take your performance to the next level",
@@ -30,7 +31,7 @@ const Home: NextPage = () => {
     },
     {
       id: "collection_accesories",
-      name: "Diving Accessories",
+      name: "Diving accessories",
       description: "Your diving essentials",
       image_src: "/assets/images/shop/accessories/buoy.jpeg",
       image_alt: "Your diving essentials",
@@ -78,7 +79,7 @@ const Home: NextPage = () => {
     [
       {
         id: 1,
-        src: "/assets/images/shop/fins/starter/black.jpg",
+        src: "/assets/images/shop/fins/starter/black-crappie.jpg",
         alt: "Starter fins",
       },
       {
@@ -100,14 +101,14 @@ const Home: NextPage = () => {
       },
       {
         id: 5,
-        src: "/assets/images/shop/fins/starter/ebony-white-cross.jpg",
+        src: "/assets/images/shop/fins/starter/frost-white.jpg",
         alt: "Starter fins",
       },
     ],
     [
       {
         id: 6,
-        src: "/assets/images/shop/fins/starter/frost-black-cross.jpg",
+        src: "/assets/images/shop/fins/starter/frost-black.jpg",
         alt: "Starter fins",
       },
       {
@@ -258,11 +259,15 @@ const Home: NextPage = () => {
                       key={product.id}
                       className="h-64 w-44 overflow-hidden rounded-lg"
                     >
-                      <img
+                   
+
+<Image<Image
+                        layout="fill"
                         src={product.src}
                         alt={product.alt}
                         className="h-full w-full object-cover object-center"
                       />
+
                     </div>
                   ))}
                 </div>
@@ -278,7 +283,8 @@ const Home: NextPage = () => {
                 {collections.map((collection) => (
                   <div key={collection.name} className="group relative">
                     <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                      <img
+                      <Image
+                        layout="fill"
                         src={collection.image_src}
                         alt={collection.image_alt}
                         className="h-full w-full object-cover object-center"
