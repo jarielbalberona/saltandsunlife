@@ -26,3 +26,11 @@ export const shop_navigation_masks = [
     link: PAGEURL.SHOP_MASKS,
   },
 ];
+
+export const shop_navigation_accessories = [
+  ...shop_navigation_default,
+  {
+    name: "Freediving Accessories",
+    link: PAGEURL.SHOP_ACCESSORIES,
+  },
+];
