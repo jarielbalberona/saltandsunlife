@@ -1,7 +1,4 @@
-import React from "react";
-import Head from "next/head";
-
-const ContactUs = () => {
+export default function ContactUs() {
   return (
     <section className="bg-white 0 min-h-screen">
       <div className="flex flex-row">
@@ -110,6 +107,4 @@ const ContactUs = () => {
       </div>
     </section>
   );
-};
-
-export default ContactUs;
+}

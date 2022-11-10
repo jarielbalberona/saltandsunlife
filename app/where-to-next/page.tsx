@@ -1,17 +1,3 @@
-import React from "react";
-import Head from "next/head";
-
-const WhereToNExt = () => {
-  return (
-    <>
-      <Head>
-        <title>
-          Where to next? | Salt & Sun Lifestyle - Dive & Outdoor Gears
-        </title>
-      </Head>
-      <div className="h-screen">where to next</div>;
-    </>
-  );
-};
-
-export default WhereToNExt;
+export default function WhereToNext() {
+  return <div className="h-screen">where to next</div>;
+}

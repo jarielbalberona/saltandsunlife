@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { StarIcon } from "@heroicons/react/20/solid";
-import { RadioGroup } from "@headlessui/react";
+
 import Breadcrumb from "components/breadcrumb";
 import { PAGEURL } from "types/url";
 import { getDiveGearItemByCode } from "app/shop/api";
