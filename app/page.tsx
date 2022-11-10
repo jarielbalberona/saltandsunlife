@@ -3,7 +3,7 @@ import ShowCollections from "components/home/show-collections";
 
 import "../styles/home.module.scss";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <div className="home-page">

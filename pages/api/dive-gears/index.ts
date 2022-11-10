@@ -2,7 +2,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import CSVTOJSON from "csvtojson";
-import { type } from "os";
 
 type Data = {
   [key: string]: any;

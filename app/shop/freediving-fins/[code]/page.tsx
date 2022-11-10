@@ -3,7 +3,7 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import Breadcrumb from "components/breadcrumb";
 import { PAGEURL } from "types/url";
 import { shop_navigation_fins } from "app/shop/constants";
-import { getDiveGearItemByCode } from "app/shop/api";
+import { getDiveGearItemByCode } from "utilities/data";
 
 const product = {
   name: "Basic Tee 6-Pack",

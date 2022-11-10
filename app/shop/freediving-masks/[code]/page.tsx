@@ -3,7 +3,7 @@ import { StarIcon } from "@heroicons/react/20/solid";
 
 import Breadcrumb from "components/breadcrumb";
 import { PAGEURL } from "types/url";
-import { getDiveGearItemByCode } from "app/shop/api";
+import { getDiveGearItemByCode } from "utilities/data";
 import { shop_navigation_masks } from "app/shop/constants";
 
 const product = {

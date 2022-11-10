@@ -1,4 +1,4 @@
-import { getDiveGearItemByCode } from "app/shop/api";
+import { getDiveGearItemByCode } from "utilities/data";
 
 export default async function Head({ params }: any) {
   const mask = await getDiveGearItemByCode(params.code);

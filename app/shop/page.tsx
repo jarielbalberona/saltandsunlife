@@ -5,13 +5,18 @@ import Breadcrumb from "components/breadcrumb";
 import Link from "next/link";
 import { PAGEURL } from "types/url";
 import { FILE_PATH } from "types/files";
-import { getDiveGearItemByType } from "./api";
+import { getDiveGearItemByType, getDiveGearItemByCode } from "utilities/data";
 import { shop_navigation_default } from "./constants";
 
 export default async function Shop() {
-  const fins = await getDiveGearItemByType("fins");
-  const masks = await getDiveGearItemByType("mask");
-
+  let fins = await getDiveGearItemByType("fins");
+  let masks = await getDiveGearItemByType("mask");
+  if (!masks.length) {
+    masks = [];
+  }
+  if (!fins.length) {
+    fins = [];
+  }
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
