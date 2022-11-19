@@ -5,7 +5,7 @@ export default async function Head({ params }: any) {
   return (
     <>
       <title>
-        {params ? params.code : ""} Ukiyo Masks | Salt & Sun Lifestyle - Dive &
+        {params ? params.name : ""} Ukiyo Masks | Salt & Sun Lifestyle - Dive &
         Outdoor Gears
       </title>
     </>

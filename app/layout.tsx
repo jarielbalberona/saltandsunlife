@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, ReactNode } from "react";
 import Script from "next/script";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import "styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { Merriweather, Montserrat, Rock_Salt } from "@next/font/google";
-import * as gtag from "utilities/google";
+// import * as gtag from "utilities/google";
 
 import Layout from "components/layout";
 
@@ -32,7 +32,7 @@ const rocksalt = Rock_Salt({
 });
 
 function MyApp({ children }: { children: ReactNode }) {
-  const router = useRouter();
+  // const router = useRouter();
 
   // useEffect(() => {
   //   // Facebook Pixel
@@ -69,6 +69,7 @@ function MyApp({ children }: { children: ReactNode }) {
         rocksalt.variable,
       ].join(" ")}
     >
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <Script
         id="gtag-base"
         strategy="afterInteractive"

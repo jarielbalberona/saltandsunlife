@@ -19,7 +19,7 @@ export default async function Shop() {
   }
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 py-8 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="title-breadcrumb">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 pb-2">
             Dive Shop

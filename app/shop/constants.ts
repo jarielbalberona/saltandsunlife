@@ -14,7 +14,7 @@ export const shop_navigation_default = [
 export const shop_navigation_fins = [
   ...shop_navigation_default,
   {
-    name: "Freediving Starter Fins",
+    name: "Starter Fins",
     link: PAGEURL.SHOP_FINS,
   },
 ];
@@ -22,7 +22,7 @@ export const shop_navigation_fins = [
 export const shop_navigation_masks = [
   ...shop_navigation_default,
   {
-    name: "Freediving Ukiyo Masks",
+    name: "Masks",
     link: PAGEURL.SHOP_MASKS,
   },
 ];

@@ -5,6 +5,8 @@ import { PAGEURL } from "types/url";
 import { shop_navigation_fins } from "app/shop/constants";
 
 import { getDiveGearItemByCode } from "utilities/data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -74,7 +76,7 @@ export default async function FreedivingFin({ params }: any) {
 
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 py-8 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="title-breadcrumb">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 pb-2">
             {fin.name} - Starter Fins | Dive Shop
@@ -90,7 +92,7 @@ export default async function FreedivingFin({ params }: any) {
           />
         </div>
       </div>
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 py-8 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="pt-6">
           {/* Image gallery */}
           <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
@@ -187,10 +189,35 @@ export default async function FreedivingFin({ params }: any) {
                     </a>
                   </div>
                 </div>
+                <div className="mt-6">
+                  <p className="text-sm">
+                    We are still working on our checkout process. To order,
+                    please send us a message in instagram or facebook and
+                    provide your desired items.
+                  </p>
+                </div>
+                <div>
+                  <div className="flex flex-wrap text-black justify-start gap-2 pr-4 mb-4 mt-2">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.facebook.com/saltandsunlifestyle"
+                    >
+                      <FontAwesomeIcon icon={faFacebookF} className="px-2" />
+                    </a>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://instagram.com/saltandsunlifestyle"
+                    >
+                      <FontAwesomeIcon icon={faInstagram} className="px-2" />
+                    </a>
+                  </div>
+                </div>
 
                 <button
                   type="submit"
-                  className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 hidden"
                 >
                   Add to bag
                 </button>

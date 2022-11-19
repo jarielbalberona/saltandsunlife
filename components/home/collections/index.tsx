@@ -9,9 +9,9 @@ const collections = [
   {
     id: "collection_masks",
     name: "Diving mask with snorkel",
-    description: "See clearly  underwater",
+    description: "Your eyes underwater",
     image_src: "/assets/images/shop/fins/starter/duo-dive-white.jpeg",
-    image_alt: "See clearly  underwater",
+    image_alt: "Your eyes underwater",
     href: PAGEURL.SHOP_MASKS,
   },
   {
