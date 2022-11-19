@@ -63,7 +63,7 @@ const Footer = () => {
           <div className="text-sm text-white mb-6 flex flex-col sm:flex-row text-center ">
             <div className="px-4 pt-2">
               <FontAwesomeIcon icon={faMapMarked} className="pr-1" /> Dumaguete
-              City, 6200 Negros Oriental
+              City, 6200 Negros Oriental, Philippines
             </div>
             <div className="px-4 pt-2">
               <FontAwesomeIcon icon={faEnvelope} className="pr-1" />

@@ -2,15 +2,16 @@
 
 module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        cursive: ["Rock Salt"],
-        sans: ["Montserrat", "sans-serif"],
-        serif: ["Merriweather", "serif"],
+        cursive: ["var(--font-rock_salt)"],
+        sans: ["var(--font-montserrat)", "sans-serif"],
+        serif: ["var(--font-merriweather)", "serif"],
       },
       colors: {
         primary: "#162a43",
@@ -27,7 +28,10 @@ module.exports = {
           900: "#00021b",
         },
       },
+      gridTemplateRows: {
+        "[auto,auto,1fr]": "auto auto 1fr",
+      },
     },
   },
-  plugins: [],
+  plugins: ["@tailwindcss/aspect-ratio"],
 };

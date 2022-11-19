@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 3000);
   }, []);
 
   return (
