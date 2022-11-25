@@ -7,16 +7,25 @@ export default async function Home() {
   return (
     <>
       <div className="home-page">
-        <header className="bg-video relative flex items-center justify-center h-[75vh] overflow-hidden">
+        <header
+          style={{
+            backgroundImage: `url("/assets/images/photographs/turtle-dive.jpg")`,
+            backgroundSize: "cover",
+            backgroundPosition: "center right",
+          }}
+          className="bg-video relative flex items-center justify-center h-[75vh] overflow-hidden"
+        >
           <div className="container z-30 px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
             <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left text-white">
               <h1 className="mt-4 text-4xl font-bold leading-tight font-cursive">
                 Salt & Sun
               </h1>
-              <h2 className="mb-4 text-3xl leading-tight">Lifestyle</h2>
-              <p className="leading-normal text-left text-sx mb-8 flex flex-col">
-                <span>Feel more alive. Experience a thrill. </span>
-                <span>Embrace the outdoor lifestyle. 🤿 x ⛰️</span>
+              <h2 className="mb-1 text-2xl leading-tight">Lifestyle</h2>
+              <p className="leading-normal text-left text-sx mb-8 flex flex-col text-sm lg:text-base">
+                <span>
+                  Your gentle freediving shop offers products from starter to
+                  pro.
+                </span>
               </p>
             </div>
           </div>
@@ -71,12 +80,18 @@ export default async function Home() {
           </svg>
           <div className="absolute w-full  top-[60%]">
             <div className="w-full mb-4 text-center">
-              <h3 className="text-2xl text-gray-800 font-bold leading-none mb-3">
-                Freediving – truly a lifestyle
+              <h3 className="text-xl lg:text-2xl text-gray-800 font-bold leading-none mb-2">
+                Freediving is more than just a sport.
               </h3>
-              <p className="text-gray-600 mb-8 px-4">
-                alter how you think, care for your body, eat, prioritize, and in
-                other ways
+              <h4 className="text-xl lg:text-2xl text-gray-800 font-bold leading-none mb-3">
+                It&apos;s a lifestyle.
+              </h4>
+              <p className="text-gray-600 mb-8 px-4 lg:w-1/2 mx-auto mt-4 text-sm lg:text-base">
+                It&apos;s not about how deep you go or how fast you can swim.
+                It&apos;s the feeling of being one with the ocean. You
+                experience it differently with every dive, sometimes more so
+                than others. It&apos;s the rush of knowing you&apos;ve pushed
+                your body and mind to their limits and surpassed them.
                 <br />
                 <br />
               </p>
