@@ -4,7 +4,7 @@ export default async function Head() {
       <title>Salt & Sun Lifestyle - Dive & Outdoor Gears</title>
       <meta
         name="description"
-        content="Feel more alive. Experience a thrill. Embrace the outdoor lifestyle. 🤿 x ⛰️"
+        content="Your gentle freediving shop offers products from starter to pro."
       />
       <meta
         property="image"
@@ -27,7 +27,7 @@ export default async function Head() {
       <meta property="og:type" content="website" />
       <meta
         property="og:description"
-        content="Feel more alive. Experience a thrill. Embrace the outdoor lifestyle. 🤿 x ⛰️"
+        content="Your gentle freediving shop offers products from starter to pro."
       />
       {/** End Open Graph */}
       <link rel="icon" href="/assets/images/meta/favicon.ico" />

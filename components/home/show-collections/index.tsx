@@ -66,16 +66,19 @@ export default function ShowCollections() {
   };
 
   return (
-    <div className="bg-white -mt-1 py-24">
+    <div className="bg-white -mt-1 pb-24 pt-44">
       <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 bg-white mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8  pt-16">
         <div className="container flex flex-col justify-center">
-          <div className="h-full  flex flex-col justify-center mb-12">
-            <h3 className="text-2xl text-gray-800 font-bold leading-none mb-3">
-              Stocks just arrived!
+          <div className="h-full flex flex-col justify-center mb-12">
+            <h3 className="text-xl text-gray-800 lg:text-left text-center font-bold  mb-3">
+              At Salt & Sun Lifestyle, we don&apos;t just sell you equipment for
+              freediving—we help you live it.
             </h3>
-            <p className="text-gray-600 mb-8">
-              Our diving gears are back in stock! Grab yours before it’s gone
-              again! Come by our store today or shop online.
+            <p className="text-gray-600 mb-8 lg:text-left text-sm lg:text-base text-center">
+              At our core, we&apos;re all about helping people find joy in the
+              outdoors. As we expand, we intend to provide more hiking and
+              camping tools so you may fully enjoy nature on your next trip. So
+              stay tuned for updates on all of our newest products and deals!
             </p>
             <a
               onClick={onClickNavigate}

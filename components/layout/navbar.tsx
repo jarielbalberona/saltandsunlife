@@ -4,7 +4,12 @@ import React, { Fragment, useEffect, useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faAnchor, faHome, faStore } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAnchor,
+  faHome,
+  faStore,
+  faPeopleGroup,
+} from "@fortawesome/free-solid-svg-icons";
 
 const explore_fd_items = [
   {
@@ -35,6 +40,12 @@ const Navbar = () => {
       name: "Shop",
       icon: <FontAwesomeIcon icon={faStore} className="pr-2" />,
       href: "/shop",
+    },
+    {
+      id: 2,
+      name: "About Us",
+      icon: <FontAwesomeIcon icon={faPeopleGroup} className="pr-2" />,
+      href: "/about-us",
     },
     {
       id: 3,
