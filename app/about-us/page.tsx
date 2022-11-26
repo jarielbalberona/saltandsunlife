@@ -5,7 +5,26 @@ import "tw-elements";
 
 export default function AboutUs() {
   return (
-    <div>
+    <main>
+      <div className="relative px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl pt-16 pb-16">
+          <div>
+            <div>
+              <h1 className="text-2xl text-center font-bold tracking-tight sm:text-3xl">
+                The people and inspiration behind
+                <br />
+                Salt & Sun Lifestyle
+              </h1>
+              <p className="mt-6 text-base  text-gray-600 text-center">
+                Dumaguete is a city that has been a long-time favorite
+                destination for divers and freedivers worldwide. It&apos;s known
+                for its friendly people, beautiful beaches, and the fact that
+                you can dive here year-round.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         id="carouselExampleCrossfade"
         className="carousel slide   relative"
@@ -105,42 +124,40 @@ export default function AboutUs() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-      <div className="w-full  mt-12">
-        <div className="w-full mb-4 text-center">
-          <h3 className="text-xl lg:text-2xl text-gray-800 font-bold leading-none mb-2">
-            About Us
-          </h3>
-          <p className="text-gray-600 mb-8 px-4 lg:w-1/2 mx-auto mt-4 text-sm lg:text-base">
-            Dumaguete is a city that has been a long-time favorite destination
-            for divers and freedivers worldwide. It&apos;s known for its
-            friendly people, beautiful beaches, and the fact that you can dive
-            here year-round.
-          </p>
-          <p className="text-gray-600 mb-8 px-4 lg:w-1/2 mx-auto mt-4 text-sm lg:text-base">
+      <div className="relative px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl pt-8 pb-12">
+          <p className="mt-6 text-base text-gray-600 text-center">
             But when you&apos;re a freediver, you need more than just a good
             location—you need gear that can safely get you through your dives.
-          </p>
-          <p className="text-gray-600 mb-8 px-4 lg:w-1/2 mx-auto mt-4 text-sm lg:text-base">
             The idea to create Salt & Sun Lifestyle came from our freediving
-            friends from <strong>Lawud</strong>, who speak of how there&apos;s
-            no local freediving shop in the city.
+            friends from{" "}
+            <a
+              href="https://facebook.com/lawud.dgte"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <strong>Lawud</strong>
+            </a>
+            , who speak of how there&apos;s no local freediving shop in the
+            city.
           </p>
-          <p className="text-gray-600 mb-8 px-4 lg:w-1/2 mx-auto mt-4 text-sm lg:text-base">
+
+          <p className="mt-6 text-base text-gray-600 text-center">
             And so we did it! We opened our online shop in July 2022 and
             haven&apos;t looked back since!
           </p>
-          <p className="text-gray-600 mb-8 px-4 lg:w-1/2 mx-auto mt-4 text-sm lg:text-base">
+          <p className="mt-6 text-base text-gray-600 text-center">
             By giving the freediving community in Dumaguete the tools they want
             at the most affordable pricing, we hope to satisfy their needs. We
             want to make it easier for the freedivers to get the gear they
             require, whether they&apos;re just starting or looking to improve.
           </p>
-          <p className="text-gray-600 mb-8 px-4 lg:w-1/2 mx-auto mt-4 text-sm lg:text-base">
+          <p className="mt-6 text-base text-gray-600 text-center">
             At Salt & Sun Lifestyle, we love what we do—and we hope you&apos;ll
             love it too!
           </p>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
