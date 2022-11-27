@@ -9,11 +9,11 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      // setLoading(false);
+      setLoading(false);
     }, 3000);
   }, []);
 
