@@ -1,5 +1,6 @@
 import Collections from "components/home/collections";
 import ShowCollections from "components/home/show-collections";
+import Testimonials from "components/testimonials";
 
 import "../styles/home.module.scss";
 
@@ -104,7 +105,8 @@ export default async function Home() {
         <hr className="mx-auto w-1/2 " />
         <section className="">
           <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-            <figure className="max-w-screen-md mx-auto">
+            <Testimonials />
+            <figure className="max-w-screen-md mx-auto hidden">
               <svg
                 className="h-12 mx-auto mb-3 text-gray-400"
                 viewBox="0 0 24 27"
