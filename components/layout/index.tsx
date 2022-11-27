@@ -1,4 +1,4 @@
-import { useEffect, useState, Fragment } from "react";
+import { useEffect, useState } from "react";
 import SplashScreen from "components/splash-screen";
 import { Transition } from "@headlessui/react";
 import Navbar from "./navbar";
