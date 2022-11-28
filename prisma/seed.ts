@@ -12,7 +12,7 @@ async function main() {
     const { seed, SeedID } = require(path);
     // const is_seeded = await checkIfSeeded(SeedID, prisma);
     // if (is_seeded) continue;
-    const filename = path.split("/seeder-files/")[1];
+    const filename = path.split("/seed-files/")[1];
     console.log(`Seeding ${filename}...`);
     await seed(prisma);
 
