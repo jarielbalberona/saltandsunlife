@@ -193,7 +193,7 @@ export default async function Shop() {
               </div>
               <div className="actions">
                 <Link
-                  href={`${PAGEURL.SHOP_MASKS}/${fin.code}`}
+                  href={`${PAGEURL.SHOP_FINS}/${fin.code}`}
                   className="inline-block w-max rounded-full text-sm border border-transparent bg-blue-100 py-3 px-4 text-center font-medium text-white hover:bg-blue-300 cursor-pointer"
                 >
                   {fin.btn_text}
