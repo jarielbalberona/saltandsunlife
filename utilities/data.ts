@@ -2,7 +2,7 @@ import path from "path";
 import CSVTOJSON from "csvtojson";
 
 const getInventory = async () => {
-  const directory = path.join(process.cwd(), "/assets/files");
+  const directory = path.join(process.cwd(), "/public/files");
   const items = await CSVTOJSON().fromFile(directory + "/inventory.csv");
   return items;
 };
