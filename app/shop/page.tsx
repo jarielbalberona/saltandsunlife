@@ -1,17 +1,26 @@
 import React from "react";
+import { PrismaClient } from "@prisma/client";
 import Breadcrumb from "components/breadcrumb";
 
 import Link from "next/link";
 import { PAGEURL } from "types/url";
-import { FILE_PATH } from "types/files";
-import { getDiveGearItemByType, getDiveGearItemByCode } from "utilities/data";
+import { getDiveGearItemByType } from "utilities/data";
 import { shop_navigation_default } from "./constants";
 import { getImageSrc } from "utilities/methods";
 
+const prisma = new PrismaClient();
+
 export default async function Shop() {
+  let all_items = await prisma.item.findMany({
+    where: { type: "fins" },
+  });
+
   let fins = await getDiveGearItemByType("fins");
   let masks = await getDiveGearItemByType("mask");
 
+  if (!all_items.length) {
+    all_items = [{ name: "test" }] as any;
+  }
   if (!masks.length) {
     masks = [];
   } else {
@@ -53,6 +62,9 @@ export default async function Shop() {
         <div className="title-breadcrumb">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 pb-2">
             Dive Shop
+          </h1>
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 pb-2">
+            {all_items[0].name} {all_items.length}
           </h1>
           <Breadcrumb items={shop_navigation_default} />
         </div>

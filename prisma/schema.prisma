@@ -1,0 +1,110 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Item {
+  id             Int         @id @default(autoincrement())
+  type           String      @default("fins")
+  code           String      @db.VarChar(100)
+  name           String      @db.VarChar(250)
+  description    String
+  details        String
+  quantity       Int
+  tags           String
+  sizes          String
+  discount       Float?
+  discount_type  String?     @db.VarChar(100)
+  price          Float
+  sold           Int
+  average_review Float
+  order_items    OrderItem[]
+  created_at     DateTime    @default(now())
+
+  @@index([type, code, name])
+  @@map(name: "items")
+}
+
+model Order {
+  id               Int         @id @default(autoincrement())
+  status           String      @default("pending")
+  subtotal         Float
+  total_discount   Float
+  discount         Discount    @relation(fields: [code], references: [code])
+  code             String      @db.VarChar(100)
+  shipping_address String
+  items            OrderItem[]
+  created_at       DateTime    @default(now())
+
+  @@index([status])
+  @@map(name: "orders")
+}
+
+model Customer {
+  id         Int      @id @default(autoincrement())
+  name       String?
+  email      String   @unique
+  created_at DateTime @default(now())
+
+  @@index([email])
+  @@map(name: "customers")
+}
+
+model Supplier {
+  id           Int      @id @default(autoincrement())
+  name         String
+  profile_link String?
+  email        String   @unique
+  created_at   DateTime @default(now())
+
+  @@index([email])
+  @@map(name: "suppliers")
+}
+
+model OrderItem {
+  id         Int      @id @default(autoincrement())
+  order      Order    @relation(fields: [order_id], references: [id])
+  order_id   Int
+  item       Item     @relation(fields: [item_id], references: [id])
+  item_id    Int
+  quantity   Int
+  total      Float
+  created_at DateTime @default(now())
+
+  @@index([order_id, item_id])
+  @@map(name: "order_items")
+}
+
+model Discount {
+  id         Int       @id @default(autoincrement())
+  type       String    @default("percentage")
+  name       String    @db.VarChar(100)
+  code       String    @unique @db.VarChar(100)
+  quantity   Int
+  amount     Float
+  items      String    @default("all")
+  remaining  Int
+  orders     Order[]
+  expired_at DateTime? @db.Timestamp
+  created_at DateTime  @default(now())
+
+  @@index([code])
+  @@map(name: "discounts")
+}
+
+model Seeder {
+  id           Int      @id @default(autoincrement())
+  filename     String   @unique
+  seed_id      Int      @unique
+  date_of_seed DateTime
+
+  @@map(name: "seeders")
+}
