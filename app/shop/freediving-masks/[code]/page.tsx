@@ -3,15 +3,20 @@ import { notFound } from "next/navigation";
 import { StarIcon } from "@heroicons/react/20/solid";
 import Breadcrumb from "components/breadcrumb";
 import { PAGEURL } from "types/url";
-import { getDiveGearItemByCode } from "utilities/data";
 import { shop_navigation_masks } from "app/shop/constants";
 import { getImageSrc } from "utilities/methods";
+import { PrismaClient, Item } from "@prisma/client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
+const prisma = new PrismaClient();
+
 export default async function FreedivingMask({ params }: any) {
-  const mask = await getDiveGearItemByCode(params.code);
+  const mask: Item | null = await prisma.item.findUnique({
+    where: { code: params.code },
+  });
+
   const reviews = { href: "#", average: 4.5, totalCount: 3 };
 
   const classNames = (...classes: any) => {
@@ -126,7 +131,7 @@ export default async function FreedivingMask({ params }: any) {
               <div className="mt-10">
                 <div className="flex items-center justify-between">
                   <h3 className="text-sm font-medium text-gray-900">Sizes</h3>
-                  <p className="text-sm font-medium ">{mask.size}</p>
+                  <p className="text-sm font-medium ">{mask.sizes}</p>
                 </div>
               </div>
 

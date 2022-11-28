@@ -1,31 +1,31 @@
 import React from "react";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Discount } from "@prisma/client";
 import Breadcrumb from "components/breadcrumb";
 
 import Link from "next/link";
 import { PAGEURL } from "types/url";
-import { getDiveGearItemByType } from "utilities/data";
 import { shop_navigation_default } from "./constants";
 import { getImageSrc } from "utilities/methods";
 
 const prisma = new PrismaClient();
 
 export default async function Shop() {
-  let all_items = await prisma.item.findMany({
-    where: { type: "fins" },
+  let masks: any = await prisma.item.findMany({
+    where: { type: "mask" },
+    take: 4,
   });
 
-  let fins = await getDiveGearItemByType("fins");
-  let masks = await getDiveGearItemByType("mask");
+  let fins: any = await prisma.item.findMany({
+    where: { type: "fins" },
+    take: 4,
+  });
 
-  if (!all_items.length) {
-    all_items = [{ name: "test" }] as any;
-  }
+  let discounts: any = await prisma.item.findMany();
+
   if (!masks.length) {
     masks = [];
   } else {
-    masks = masks.slice(0, 4);
-    masks = masks.map((mask) => ({
+    masks = masks.map((mask: any) => ({
       ...mask,
       btn_text: "View Details",
     }));
@@ -42,8 +42,7 @@ export default async function Shop() {
   if (!fins.length) {
     fins = [];
   } else {
-    fins = fins.slice(0, 4);
-    fins = fins.map((fin) => ({
+    fins = fins.map((fin: any) => ({
       ...fin,
       btn_text: "View Details",
     }));
@@ -56,6 +55,16 @@ export default async function Shop() {
       btn_text: "View all fins",
     };
   }
+
+  const getDiscountedPrice = (amount: any, type = "masks") => {
+    let price = 0;
+    const discount = discounts.find(
+      (discount: Discount) => discount.items === type
+    );
+    console.log("discount", discount);
+    // continue
+  };
+
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-8 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -63,9 +72,7 @@ export default async function Shop() {
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 pb-2">
             Dive Shop
           </h1>
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 pb-2">
-            {all_items[0].name} {all_items.length}
-          </h1>
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 pb-2"></h1>
           <Breadcrumb items={shop_navigation_default} />
         </div>
       </div>

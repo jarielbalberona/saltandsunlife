@@ -1,14 +1,17 @@
 import React, { useEffect } from "react";
-import Head from "next/head";
 import Breadcrumb from "components/breadcrumb";
 import Link from "next/link";
 import { PAGEURL } from "types/url";
 import { FILE_PATH } from "types/files";
 import { shop_navigation_fins } from "../constants";
-import { getDiveGearItemByType } from "utilities/data";
+import { PrismaClient, Item } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export default async function Shop() {
-  const fins = await getDiveGearItemByType("fins");
+  const fins: Item[] = await prisma.item.findMany({
+    where: { type: "fins" },
+  });
 
   return (
     <div className="bg-white">

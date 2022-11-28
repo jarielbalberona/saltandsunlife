@@ -1,12 +1,16 @@
 import Breadcrumb from "components/breadcrumb";
 import Link from "next/link";
+import { PrismaClient, Item } from "@prisma/client";
 import { PAGEURL } from "types/url";
 import { FILE_PATH } from "types/files";
 import { shop_navigation_masks } from "../constants";
-import { getDiveGearItemByType } from "utilities/data";
+
+const prisma = new PrismaClient();
 
 export default async function Shop() {
-  const masks = await getDiveGearItemByType("mask");
+  const masks: Item[] = await prisma.item.findMany({
+    where: { type: "mask" },
+  });
 
   return (
     <div className="bg-white">

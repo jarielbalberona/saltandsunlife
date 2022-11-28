@@ -14,7 +14,7 @@ datasource db {
 model Item {
   id             Int         @id @default(autoincrement())
   type           String      @default("fins")
-  code           String      @db.VarChar(100)
+  code           String      @unique @db.VarChar(100)
   name           String      @db.VarChar(250)
   description    String
   details        String

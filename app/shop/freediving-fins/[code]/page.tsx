@@ -7,9 +7,14 @@ import { getDiveGearItemByCode } from "utilities/data";
 import { getImageSrc } from "utilities/methods";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { PrismaClient, Item } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export default async function FreedivingFin({ params }: any) {
-  const fin = await getDiveGearItemByCode(params.code);
+  const fin: Item | null = await prisma.item.findUnique({
+    where: { code: params.code },
+  });
 
   const reviews = { href: "#", average: 4, totalCount: 117 };
 
@@ -128,7 +133,7 @@ export default async function FreedivingFin({ params }: any) {
                 <div className="flex items-center justify-between">
                   <h3 className="text-sm font-medium text-gray-900">Sizes</h3>
                   <p className="text-sm font-medium ">
-                    {fin.size.split(",").join(", ")}
+                    {fin.sizes.split(",").join(", ")}
                   </p>
                 </div>
               </div>
