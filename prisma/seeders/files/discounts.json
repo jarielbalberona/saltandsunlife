@@ -1,0 +1,20 @@
+[
+  {
+    "type": "percentage",
+    "name": "All fins discount default",
+    "code": "starterfins10",
+    "quantity": -1,
+    "amount": 10,
+    "items": "fins",
+    "remaining": -1
+  },
+  {
+    "type": "percentage",
+    "name": "All masks discount default",
+    "code": "ukiyomasks10",
+    "quantity": -1,
+    "amount": 10,
+    "items": "fins",
+    "remaining": -1
+  }
+]
